@@ -23,7 +23,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/kosei/Downloads/wallpapers/wisewolf.jpeg fill
+output * bg ./wisewolf.jpeg fill
 exec fcitx5
 exec ags
 exec ags -c /home/kosei/.config/ags/modules/applauncher/config.js -b launcher
