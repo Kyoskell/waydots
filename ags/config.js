@@ -33,9 +33,9 @@ Utils.readFileAsync(App.configDir + "/formatted_matugen.json")
     const themeJson = JSON.parse(colors);
     const theme = themeJson["colors"]["dark"];
     Utils.writeFileSync(
-      matugenToStr(theme),
+      matugenToStr("${{key}}: {{value}};", theme),
       App.configDir + "/colors.scss"
-    ).catch(err => print(err))
+    )
   })
   .catch(err => print(err))
 

@@ -14,20 +14,20 @@
 
 .launcher {
   &-button {
-    background: $secondary-container;
+    background: $primary-container;
   }
   &-icon {
-    color: $on-secondary-container;
+    color: $on-primary-container;
   }
 }
 
 .workspaces {
-  background: $secondary-container;
+  background: $primary-container;
   padding: 0 5px;
   border-radius: 10px;
 
   &-icon {
-    color: $on-secondary-container;
+    color: $on-primary-container;
   }
 }
 
@@ -42,27 +42,27 @@
 .time {
   border-radius: 5px;
   padding: 5px;
-  background: $secondary-container;
-  color: $on-secondary-container;
+  background: $primary-container;
+  color: $on-primary-container;
 }
 
 .volume {
   margin-right: 20px;
-  background: $secondary-container;
+  background: $primary-container;
   padding: 0 5px;
   border-radius: 10px;
-  color: $on-secondary-container;
+  color: $on-primary-container;
 }
 
 .combo {
-  background: $secondary-container;
+  background: $primary-container;
   padding: 0 5px;
   border-radius: 10px;
 }
 
 .wifi-icon {
   font-size: 1.5em;
-  color: $on-secondary-container;
+  color: $on-primary-container;
 }
 /*Battery style*/
 .battery {
@@ -95,10 +95,10 @@
 .arch {
   &-button {
     margin-left: 10px;
-    background: $secondary-container;
+    background: $error-container;
   }
 
   &-icon {
-    color: $on-secondary-container;
+    color: $on-error-container;
   }
 }
