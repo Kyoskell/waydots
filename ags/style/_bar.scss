@@ -1,4 +1,4 @@
-@use './colors';
+@use 'colors' as *;
 
 #StatusBar {
   background: $surface-bright;
@@ -14,10 +14,10 @@
 
 .launcher {
   &-button {
-    background: $primary-container;
+    background: $secondary-container;
   }
   &-icon {
-    color: $on-primary-container;
+    color: $on-secondary-container;
   }
 }
 

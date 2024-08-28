@@ -1,41 +1,19 @@
 import { StatusBar } from "./modules/status_bar/status_bar.js";
 import { NotificationPopups } from "./modules/popup/notification.js";
 import { Prompt } from "./modules/prompt/prompt.js";
+import { applyScss } from "./utils/theme.js";
+
 Utils.monitorFile(
-  `${App.configDir}/style/`,
+  `${App.configDir}` + "/style/",
   function() {
-    const css = `${App.configDir}/style/style.css`;
-    App.resetCss()
-    App.applyCss(css)
+    applyScss()
   },
 )
+
 App.config({
     icons: `${App.configDir}/assets/`,
-    style: `${App.configDir}/style/style.css`,
+    style: `${App.configDir}/style.css`,
     windows: [StatusBar, NotificationPopups(), Prompt],
     gtkTheme: "Materia",
     iconTheme: "Adwaita",
 })
-
-function matugenToStr (format = "${{key}}: {{value}};", json) {
-  let result = "";
-
-  for (let key in json) {
-    let value = json[key];
-    result += format.replace("{{key}}", key).replace("{{value}}", value) + "\n";
-  }
-
-  return result;
-}
-
-Utils.readFileAsync(App.configDir + "/formatted_matugen.json")
-  .then((colors) => {
-    const themeJson = JSON.parse(colors);
-    const theme = themeJson["colors"]["dark"];
-    Utils.writeFileSync(
-      matugenToStr("${{key}}: {{value}};", theme),
-      App.configDir + "/colors.scss"
-    )
-  })
-  .catch(err => print(err))
-

@@ -1,6 +1,5 @@
-@import url("colors.css");
 #StatusBar {
-  background: @surface-bright;
+  background: #37393e;
 }
 
 .main {
@@ -11,86 +10,103 @@
   margin-left: 200px;
 }
 
-
 .launcher-button {
-  background: @primary-container;
+  background: #3f4759;
 }
-
 .launcher-icon {
-  color: @on-primary-container;
+  color: #dbe2f9;
 }
 
 .workspaces {
-  background: @primary-container;
+  background: #2b4678;
   padding: 0 5px;
   border-radius: 10px;
 }
-
-.workspace-icon {
-  color: @on-primary-container;
+.workspaces-icon {
+  color: #d8e2ff;
 }
 
 .focused {
-  color: @error;
+  color: #ffb4ab;
 }
+
 /*Right */
 .right {
   margin-right: 200px;
 }
+
 /*Time */
 .time {
   border-radius: 5px;
   padding: 5px;
-  background: @primary-container;
-  color: @on-primary-container;
+  background: #2b4678;
+  color: #d8e2ff;
 }
 
 .volume {
   margin-right: 20px;
-  background: @primary-container;
+  background: #2b4678;
   padding: 0 5px;
   border-radius: 10px;
-  color: @on-primary-container;
+  color: #d8e2ff;
 }
 
 .combo {
-  background: @primary-container;
+  background: #2b4678;
   padding: 0 5px;
   border-radius: 10px;
 }
 
 .wifi-icon {
   font-size: 1.5em;
-  color: @on-primary-container;
+  color: #d8e2ff;
 }
+
 /*Battery style*/
 .battery {
   margin: 0 10px;
 }
+
 .battery-progress trough {
   min-width: 75px;
   min-height: 20px;
   border-radius: 2.5px;
-  border: 1px solid @on-surface;
+  border: 1px solid #e2e2e9;
 }
-
 .battery-progress progress {
   min-height: 18px;
   border-radius: 2.5px;
-  background: @on-primary-container;
+  background: #d8e2ff;
 }
-
 .battery-bulb {
   min-width: 3px;
   min-height: 14px;
-  background: @on-surface;
+  background: #e2e2e9;
 }
 
 .arch-button {
   margin-left: 10px;
-  background: @error-container;
+  background: #93000a;
+}
+.arch-icon {
+  color: #ffdada;
 }
 
-.arch-icon {
-  color: @on-error-container;
+.p-button {
+  min-width: 100px;
+  margin: 10px;
+  background: #3f4759;
 }
+
+.p-icon {
+  font-size: 1.5em;
+  color: #dbe2f9;
+}
+
+.p-label {
+  color: #2f3036;
+  border-radius: 5px;
+  background: #e2e2e9;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -9,14 +9,21 @@ function matugenToStr (format = "${{key}}: {{value}};", json) {
   return result;
 }
 
-Utils.readFileAsync(App.configDir + "/formatted_matugen.json")
-  .then((colors) => {
-    const themeJson = JSON.parse(colors);
-    const theme = themeJson["colors"]["dark"];
-    Utils.writeFileSync(
-      matugenToStr(theme),
-      App.configDir + "/colors.scss"
-    ).catch(err => print(err))
-  })
-  .catch(err => print(err))
+export function applyScss () {
+  let scss = App.configDir + "/style/style.scss";
+  let css = App.configDir + "/style.css";
+  Utils.execAsync(`sass ${scss} ${css}`);
+  App.resetCss();
+  App.applyCss(css);
+}
 
+//Utils.readFileAsync(App.configDir + "/formatted_matugen.json")
+//  .then((colors) => {
+//    const themeJson = JSON.parse(colors);
+//    const theme = themeJson["colors"]["dark"];
+//    Utils.writeFileSync(
+//      matugenToStr("${{key}}: {{value}};", theme),
+//      App.configDir + "/colors.scss"
+//    )
+//  })
+//  .catch(err => print(err))
